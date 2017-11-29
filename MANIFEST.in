@@ -52,3 +52,6 @@ recursive-include examples *.py
 recursive-include examples *.sh
 recursive-include rerodoc_data *.html
 recursive-include tests *.py
+
+# added by check_manifest.py
+recursive-include development *.md
