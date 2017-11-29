@@ -40,7 +40,7 @@ blueprint = Blueprint(
 )
 
 
-@blueprint.route("/")
+@blueprint.route("/data")
 def index():
     """Render a basic view."""
     return render_template(

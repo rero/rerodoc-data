@@ -54,6 +54,6 @@ def test_view(app):
     """Test view."""
     RerodocData(app)
     with app.test_client() as client:
-        res = client.get("/")
+        res = client.get("/data")
         assert res.status_code == 200
         assert 'Welcome to Rerodoc-Data' in str(res.data)

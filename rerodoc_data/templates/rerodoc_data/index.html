@@ -25,7 +25,11 @@
 {%- extends config.RERODOC_DATA_BASE_TEMPLATE %}
 
 {%- block page_body %}
-TODO: Example template, please remove if you do not need it.
-{{_('Welcome to %(module_name)s', module_name=module_name)}}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            {{_('Welcome to %(module_name)s', module_name=module_name)}}
+        </div>
+    </div>
+</div>
 {%- endblock %}
-
