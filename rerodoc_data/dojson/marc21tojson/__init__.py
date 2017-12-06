@@ -22,13 +22,10 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-"""Data models for RERO DOC."""
+"""Marc21 to json transformation for RERO DOC."""
 
-# TODO: This is an example file. Remove it if your package does not use any
-# extra configuration variables.
+from __future__ import absolute_import, print_function
 
-RERODOC_DATA_OAI_JSONSCHEMA = 'records/record-v0.0.1.json'
-"""Default value for the application."""
+from .model import marc21tojson
 
-RERODOC_DATA_BASE_TEMPLATE = 'rerodoc_data/base.html'
-"""Default base template for the demo page."""
+__all__ = ('marc21tojson')

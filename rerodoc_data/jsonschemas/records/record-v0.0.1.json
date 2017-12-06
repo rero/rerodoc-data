@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Schema for bibliographic records",
+    "type": "object",
+    "required": ["$schema", "bibid", "title"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "title": "Schema",
+            "description": "Schema to validate book records against.",
+            "type": "string",
+            "minLength": 7
+        },
+        "bibid": {
+            "title": "Bibid",
+            "description": "rero21 persistent identifiers for bibliographic records.",
+            "type": "string",
+            "minLength": 1
+        },
+        "title": {
+            "title": "Title",
+            "description": "Required. Entire title without statement of responsibility.",
+            "type": "string",
+            "minLength": 1
+        },
+        "external_oai_id": {
+            "title": "External OAI Id",
+            "description": "Identifier of the harvested record.",
+            "type": "string",
+            "minLength": 1
+        }
+    }
+}

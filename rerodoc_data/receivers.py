@@ -21,14 +21,28 @@
 # In applying this license, RERO does not
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
+"""Signals connections for RERO DOC."""
 
-"""Data models for RERO DOC."""
+from celery import shared_task
+from dojson.contrib.marc21.utils import create_record
+from flask import current_app
+from invenio_jsonschemas import current_jsonschemas as jsonschemas
 
-# TODO: This is an example file. Remove it if your package does not use any
-# extra configuration variables.
+from rerodoc_data.dojson.marc21tojson import marc21tojson
 
-RERODOC_DATA_OAI_JSONSCHEMA = 'records/record-v0.0.1.json'
-"""Default value for the application."""
+from .tasks import create_records
 
-RERODOC_DATA_BASE_TEMPLATE = 'rerodoc_data/base.html'
-"""Default base template for the demo page."""
+
+def publish_harvested_records(sender=None, records=[], *args, **kwargs):
+    """Create, index the harvested records."""
+    converted_records = []
+    schema = current_app.config.get('RERODOC_DATA_OAI_JSONSCHEMA')
+    schema_url = jsonschemas.path_to_url(schema)
+    for record in records:
+        identifier = record.header.identifier
+        deleted = record.deleted
+        rec = create_record(record.xml)
+        rec = marc21tojson.do(rec)
+        rec['$schema'] = schema_url
+        converted_records.append(rec)
+    create_records.delay(converted_records)

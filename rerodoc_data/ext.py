@@ -27,8 +27,10 @@
 from __future__ import absolute_import, print_function
 
 from flask_babelex import gettext as _
+from invenio_oaiharvester.signals import oaiharvest_finished
 
 from . import config
+from .receivers import publish_harvested_records
 from .views import blueprint
 
 
@@ -37,12 +39,9 @@ class RerodocData(object):
 
     def __init__(self, app=None):
         """Extension initialization."""
-        # TODO: This is an example of translation string with comment. Please
-        # remove it.
-        # NOTE: This is a note to a translator.
-        _('A translation string')
         if app:
             self.init_app(app)
+        self.register_signals(app)
 
     def init_app(self, app):
         """Flask application initialization."""
@@ -61,3 +60,9 @@ class RerodocData(object):
         for k in dir(config):
             if k.startswith('RERODOC_DATA_'):
                 app.config.setdefault(k, getattr(config, k))
+
+    @staticmethod
+    def register_signals(app):
+        """Register Zenodo Deposit signals."""
+        oaiharvest_finished.connect(publish_harvested_records,
+                                    weak=False)

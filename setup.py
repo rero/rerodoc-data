@@ -92,6 +92,10 @@ setup(
         'invenio_i18n.translations': [
             'messages = rerodoc_data',
         ],
+        'dojson.cli.rule': [
+            'marc21tojson ='
+            'rerodoc_data.dojson.marc21tojson:marc21tojson'
+        ],
         # TODO: Edit these entry points to fit your needs.
         # 'invenio_access.actions': [],
         # 'invenio_admin.actions': [],
@@ -101,7 +105,21 @@ setup(
         # 'invenio_base.blueprints': [],
         # 'invenio_celery.tasks': [],
         # 'invenio_db.models': [],
-        # 'invenio_pidstore.minters': [],
+        'invenio_pidstore.minters': [
+            'bibid = rerodoc_data.minters:bibid_minter'
+        ],
+        'invenio_pidstore.fetchers': [
+            'bibid = rerodoc_data.fetchers:bibid_fetcher'
+        ],
+        'invenio_jsonschemas.schemas': [
+            'record = rerodoc_data.jsonschemas'
+        ],
+        'invenio_search.mappings': [
+            'records = rerodoc_data.mappings'
+        ],
+        'invenio_celery.tasks': [
+            'rerodoc_data = rerodoc_data.tasks',
+        ],
         # 'invenio_records.jsonresolver': [],
     },
     extras_require=extras_require,

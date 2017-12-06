@@ -24,11 +24,25 @@
 
 """Data models for RERO DOC."""
 
-# TODO: This is an example file. Remove it if your package does not use any
-# extra configuration variables.
+from __future__ import absolute_import, print_function
 
-RERODOC_DATA_OAI_JSONSCHEMA = 'records/record-v0.0.1.json'
-"""Default value for the application."""
+from collections import namedtuple
 
-RERODOC_DATA_BASE_TEMPLATE = 'rerodoc_data/base.html'
-"""Default base template for the demo page."""
+from invenio_pidstore.providers.recordid import RecordIdProvider
+
+FetchedPID = namedtuple('FetchedPID', ['provider', 'pid_type', 'pid_value'])
+"""A pid fetcher."""
+
+
+def bibid_fetcher(record_uuid, data):
+    """Fetch a record's identifiers.
+
+    :param record_uuid: The record UUID.
+    :param data: The record metadata.
+    :returns: A :data:`reroils_data.fetchers.FetchedPID` instance.
+    """
+    return FetchedPID(
+        provider=RecordIdProvider,
+        pid_type=RecordIdProvider.pid_type,
+        pid_value=data['bibid']
+    )

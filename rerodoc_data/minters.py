@@ -24,11 +24,19 @@
 
 """Data models for RERO DOC."""
 
-# TODO: This is an example file. Remove it if your package does not use any
-# extra configuration variables.
+from __future__ import absolute_import, print_function
 
-RERODOC_DATA_OAI_JSONSCHEMA = 'records/record-v0.0.1.json'
-"""Default value for the application."""
+from invenio_pidstore.providers.recordid import RecordIdProvider
 
-RERODOC_DATA_BASE_TEMPLATE = 'rerodoc_data/base.html'
-"""Default base template for the demo page."""
+
+def bibid_minter(record_uuid, data):
+    """RERIOLS bibid minter."""
+    assert 'bibid' not in data
+    provider = RecordIdProvider.create(
+        object_type='rec',
+        object_uuid=record_uuid
+    )
+    pid = provider.pid
+    data['bibid'] = pid.pid_value
+
+    return pid

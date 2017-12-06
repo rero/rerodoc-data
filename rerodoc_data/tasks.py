@@ -22,13 +22,30 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-"""Data models for RERO DOC."""
+"""Celery tasks to create records."""
 
-# TODO: This is an example file. Remove it if your package does not use any
-# extra configuration variables.
+from __future__ import absolute_import, print_function
 
-RERODOC_DATA_OAI_JSONSCHEMA = 'records/record-v0.0.1.json'
-"""Default value for the application."""
+import uuid
 
-RERODOC_DATA_BASE_TEMPLATE = 'rerodoc_data/base.html'
-"""Default base template for the demo page."""
+from celery import shared_task
+from invenio_db import db
+from invenio_indexer.api import RecordIndexer
+from invenio_records.api import Record
+
+from rerodoc_data.minters import bibid_minter
+
+
+@shared_task(ignore_result=True)
+def create_records(records):
+    """Async records creation and indexing."""
+    record_indexer = RecordIndexer()
+    record_uuids = []
+    for record in records:
+        uid = uuid.uuid4()
+        id = bibid_minter(uid, record)
+        record = Record.create(record, id_=uid)
+        record_uuids.append(uid)
+    record_indexer.bulk_index(record_uuids)
+    record_indexer.process_bulk_queue()
+    db.session.commit()

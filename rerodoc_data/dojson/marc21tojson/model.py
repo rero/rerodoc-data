@@ -22,13 +22,38 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-"""Data models for RERO DOC."""
+"""Marc21 to json transformation for RERO DOC."""
 
-# TODO: This is an example file. Remove it if your package does not use any
-# extra configuration variables.
+from __future__ import absolute_import, print_function
 
-RERODOC_DATA_OAI_JSONSCHEMA = 'records/record-v0.0.1.json'
-"""Default value for the application."""
+import re
 
-RERODOC_DATA_BASE_TEMPLATE = 'rerodoc_data/base.html'
-"""Default base template for the demo page."""
+from dojson import Overdo, utils
+from dojson.utils import force_list
+
+marc21tojson = Overdo()
+
+
+@marc21tojson.over('title', '^245..')
+@utils.ignore_value
+def marc21totitle(self, key, value):
+    """Get title.
+
+    title: 245$a
+    """
+    titles = []
+    main_title = value.get('a')
+    if main_title:
+        titles.append(main_title)
+    sub_title = value.get('b', '')
+    if sub_title:
+        titles.append(sub_title)
+
+    return ': '.join(titles)
+
+
+@marc21tojson.over('external_oai_id', '^0248.')
+@utils.ignore_value
+def marc21tooai(self, key, value):
+    """Get OAI External ID."""
+    return value.get('a')
