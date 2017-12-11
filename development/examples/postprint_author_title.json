@@ -1,40 +1,46 @@
 {
-	"id": "1",
-	"titles": {
-		"main": {
-			"values": [{
-					"value": "Harry Potter à l'école des sorciers",
-					"lang": "fr"
-				}, {
-					"value": "Harry Potter and the philosophical stone",
-					"lang": "en"
-				}
-			]
-		},
-		"sub": {
-			"values": [{
-					"value": "roman",
-					"lang": "fr"
-				}
-			]
-		}
-	},
-	"contributors": [{
-			"identifiers": {
-				"identifier": "02-1235",
-				"scheme": "rero"
-			},
-			"names": {
-				"name": "Rowling, J.K.",
-				"lang": "fr"
-			},
-			"role": "author"
-		}, {
-			"names": {
-				"name": "Ménard, Jean-François",
-				"lang": "fr"
-			},
-			"role": "translator"
-		}
-	]
+  "$schema": "https://rerodoc.test.rero.ch/schema/records/records-v.0.0.1.json",
+  "bibid": "1",
+  "titles": {
+    "main": {
+      "values": [
+        {
+          "value": "Harry Potter à l'école des sorciers",
+          "lang": "fr"
+        },
+        {
+          "value": "Harry Potter and the philosophical stone",
+          "lang": "en"
+        }
+      ]
+    },
+    "sub": {
+      "values": [
+        {
+          "value": "roman",
+          "lang": "fr"
+        }
+      ]
+    }
+  },
+  "contributors": [
+    {
+      "identifiers": {
+        "identifier": "02-1235",
+        "scheme": "rero"
+      },
+      "names": {
+        "name": "Rowling, J.K.",
+        "lang": "fr"
+      },
+      "role": "author"
+    },
+    {
+      "names": {
+        "name": "Ménard, Jean-François",
+        "lang": "fr"
+      },
+      "role": "translator"
+    }
+  ]
 }

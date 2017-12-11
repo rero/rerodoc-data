@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Schema for bibliographic records",
+  "type": "object",
+  "required": ["$schema", "bibid", "titles", "contributors"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "title": "Schema",
+      "description": "Schema to validate book records against.",
+      "type": "string",
+      "minLength": 7
+    },
+    "bibid": {
+      "title": "Bibid",
+      "description": "RERO DOC persistent identifiers for records.",
+      "type": "string",
+      "minLength": 1
+    },
+    "titles": {
+      "title": "Titles",
+      "description": "Required. Entire title without statement of responsibility.",
+      "type": "object",
+      "required": ["main"],
+      "additionalProperties": false,
+      "properties": {
+        "main": {
+          "title": "Main",
+          "description": "Main title of the document",
+          "type": "object",
+          "required": ["values"],
+          "additionalProperties": false,
+          "properties": {
+            "values": {
+              "title": "Values",
+              "description": "Values accepted for the main title",
+              "type": "array",
+              "additionalItems": false,
+              "items": {
+                "value": {
+                  "title": "value",
+                  "description": "Actual main title of the document",
+                  "type": "string",
+                  "MinLength": 1
+                },
+                "lang": {
+                  "title": "Language",
+                  "description": "Language of the main title",
+                  "type": "string",
+                  "enum": ["fre","eng","ger","spa",
+                    "ita","lat","por","rom","pol",
+                    "tur","fr","hun","roh","mul",
+                    "srp","alb","rum","dut","hrv",
+                    "swa","run","slo"]
+                }
+              }
+            }
+          }
+        },
+        "sub": {
+          "title": "Subtitle",
+          "type": "object",
+          "properties": {
+            "values": {
+              "title": "Values",
+              "description": "Values accepted for the subtile",
+              "type": "array",
+              "additionalItems": false,
+              "items": {
+                "value": {
+                  "title": "value",
+                  "description": "Actual subtitle of the document",
+                  "type": "string",
+                  "MinLength": 1
+                },
+                "lang": {
+                  "title": "Language",
+                  "description": "Language of the subtitle",
+                  "type": "string",
+                  "enum": ["fre","eng","ger","spa",
+                    "ita","lat","por","rom","pol",
+                    "tur","fr","hun","roh","mul",
+                    "srp","alb","rum","dut","hrv",
+                    "swa","run","slo"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "contributors": {
+      "title": "Contributors",
+      "description": "List of the contributors of the document",
+      "type": "array",
+      "MinItems": 1,
+      "additionalItems": false,
+      "items": {
+        "identifiers": {
+          "title": "Identifiers",
+          "description": "List of internal or external identifiers of the contributors",
+          "type": "object",
+          "properties": {
+            "identifier": {
+              "title": "Identifier",
+              "description": "Actual identifier of the contributor",
+              "type": "string",
+              "MinLength": 1
+            },
+            "scheme": {
+              "title": "Scheme",
+              "description": "Scheme of the identifier",
+              "type": "string",
+              "enum": ["rero"]
+            }
+          }
+        },
+        "names": {
+          "title": "Names",
+          "description": "???",
+          "type": "object",
+          "required": ["name"],
+          "additonalProperties": false,
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "Name of the contributor",
+              "type": "string",
+              "MinLength": 1
+            },
+            "lang": {
+              "title": "Language",
+              "description": "Language of the main title",
+              "type": "string",
+              "enum": ["fre","eng","ger","spa",
+                "ita","lat","por","rom","pol",
+                "tur","fr","hun","roh","mul",
+                "srp","alb","rum","dut","hrv",
+                "swa","run","slo"]
+            }
+          }
+        },
+        "role": {
+          "title": "Role",
+          "description": "Role of the contributor",
+          "type": "string",
+          "enum": ["author", "translator", "illustrator", "director"]
+        }
+      }
+    },
+    "external_oai_id": {
+      "title": "External OAI Id",
+      "description": "Identifier of the harvested record.",
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
