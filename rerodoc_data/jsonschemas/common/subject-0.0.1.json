@@ -1,0 +1,38 @@
+{
+    "title": "Subject from the Collective Catalog",
+    "uniqueItems": true,
+    "minItems" : 0,
+    "type": "array",
+    "items": {
+        "type": "object",
+        "title": "Subject",
+        "properties": {
+            "vocabulary": {
+                "title": "Vocabulary",
+                "readOnly": true,
+                "type": "string",
+                "enum": [
+                    "rero",
+                    "chrero",
+                    "cjurivoc",
+                    "rerovoc",
+                    "jurivoc",
+                    "lcsh",
+                    "mesh"
+                ]
+            },
+            "tag": {
+                "title": "Original Marc Field",
+                "readOnly": true,
+                "type": "string",
+                "pattern": "^6[0-9]{2}[0-9,_]{2}$"
+            },
+            "content": {
+                "title": "Dimension of the document",
+                "readOnly": true,
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false
+}

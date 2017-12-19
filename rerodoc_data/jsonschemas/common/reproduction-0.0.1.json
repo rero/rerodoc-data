@@ -1,0 +1,27 @@
+{
+    "title": "Reproduction",
+    "type": "object",
+    "properties": {
+        "type": {
+            "title": "Type",
+            "type": "string"
+        },
+        "location": {
+            "title": "Location",
+            "type": "string"
+        },
+        "agency": {
+            "title": "Agency",
+            "type": "string"
+        },
+        "date": {
+            "title": "Date",
+            "type": "string"
+        },
+        "full": {
+            "title": "Reproduction as String",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

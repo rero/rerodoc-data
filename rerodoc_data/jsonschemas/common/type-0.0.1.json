@@ -1,0 +1,22 @@
+{
+    "propertyOrder": 1,
+    "title": "Document type",
+    "uniqueItems": true,
+    "minItems": 3,
+    "maxItems": 3,
+    "type": "array",
+    "default": [
+        "bibrec",
+        "book",
+        "text"
+    ],
+    "items": {
+        "type": "string",
+        "enum": [
+            "bibrec",
+            "book",
+            "audio",
+            "text"
+        ]
+    }
+}

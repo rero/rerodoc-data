@@ -1,0 +1,52 @@
+{
+    "title": "Authors",
+    "description": "List with all the authors",
+    "type": "array",
+    "items": {
+        "title": "Author",
+        "id": "author_item",
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+            "name": {
+                "title": "Author name",
+                "description": "author name as it appears in the paper",
+                "type": "string",
+                "format": ".+, .+"
+            },
+            "date": {
+                "title": "Birth and death date of the author",
+                "type": "string"
+            },
+            "affiliation": {
+                "title": "Affiliation",
+                "description": "author's affiliation",
+                "type": "string"
+            },
+            "orcid": {
+                "title": "ORCID ID",
+                "description": "ORCID Id when available",
+                "type": "string",
+                "pattern": "^http://orcid.org/\\d{4}-\\d{4}-\\d{4}-\\d{4}$",
+                "format": "uri"
+            },
+            "role": {
+                "title": "Role of the person",
+                "description": "Role of the author within the paper.",
+                "type": "string",
+                "enum": [
+                    "Dir.",
+                    "Codir."
+                ]
+            },
+            "full": {
+                "title": "Author name",
+                "description": "Author as string",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    },
+    "uniqueItems": true,
+    "minItems" : 0
+}

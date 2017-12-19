@@ -1,0 +1,6 @@
+{
+    "propertyOrder": 5,
+    "type": "string",
+    "title": "ISBN identifier with 13 digits",
+    "pattern": "^[0-9]{13}$"
+}

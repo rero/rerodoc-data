@@ -27,7 +27,7 @@
 # TODO: This is an example file. Remove it if your package does not use any
 # extra configuration variables.
 
-RERODOC_DATA_OAI_JSONSCHEMA = 'records/record-v0.0.1.json'
+RERODOC_DATA_OAI_JSONSCHEMA = 'records/book-v0.0.1.json'
 """Default value for the application."""
 
 RERODOC_DATA_BASE_TEMPLATE = 'rerodoc_data/base.html'

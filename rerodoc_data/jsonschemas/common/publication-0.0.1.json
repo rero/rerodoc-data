@@ -1,0 +1,31 @@
+{
+    "title": "publication",
+	"type": "object",
+    "properties": { 
+        "location": {
+            "title": "Publication location",
+            "type": "string"
+        },
+        "publisher": {
+            "title": "Publisher of the publication",
+            "type": "string"
+        },
+        "date": {
+            "title": "Publication date",
+            "type": "string"
+        },
+        "print_location": {
+            "title": "Location of the printer of the publication",
+            "type": "string"
+        },
+        "printer": {
+            "title": "Printer of the publication",
+            "type": "string"
+        },
+         "full": {
+            "title": "Publication as string",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

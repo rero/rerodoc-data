@@ -1,0 +1,6 @@
+{
+    "title": "Submission Number",
+    "type": "string",
+    "readOnly": true,
+    "pattern": "^[0-9]{14}-[A-Z]{2}$"
+}

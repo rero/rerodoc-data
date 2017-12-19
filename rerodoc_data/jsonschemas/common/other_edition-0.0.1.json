@@ -1,0 +1,17 @@
+{
+    "title": "Other Edition",
+    "type": "object",
+    "properties": {
+        "type": {
+            "title": "Type",
+            "type": "string"
+        },
+        "url": {
+            "title": "Link",
+            "type": "string",
+            "format": "uri",
+            "pattern": "^http(s{0,1})://"
+        }
+    },
+    "additionalProperties": false
+}

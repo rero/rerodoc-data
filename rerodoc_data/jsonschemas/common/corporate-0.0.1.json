@@ -1,0 +1,8 @@
+{
+    "title": "Corporate Authors",
+    "uniqueItems": false,
+    "type": "array",
+    "items": {
+        "type": "string"
+    }
+}

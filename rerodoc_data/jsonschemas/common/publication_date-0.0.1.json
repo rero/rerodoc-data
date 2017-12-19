@@ -1,0 +1,19 @@
+{
+    "title": "Date of publication",
+    "type": "object",
+    "properties": {
+        "from": {
+            "title": "From date",
+            "type": "integer"
+            },
+        "to": {
+            "title": "To date",
+            "type": "integer"
+        },
+        "full": {
+            "title": "Date as string",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

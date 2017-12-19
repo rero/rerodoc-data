@@ -1,0 +1,27 @@
+{
+    "uniqueItems": true,
+    "type": "array",
+    "title": "External Link",
+    "items": {
+        "type": "object",
+        "title": "Extenal Link",
+        "properties": {           
+            "datetime": {
+                "title": "Date Time Added",
+                "type": "string",
+                "readOnly": true
+            },
+            "url": {
+                "title": "URL",
+                "type": "string",
+                "format": "url",
+                "pattern": "^http(s{0,1})://"
+            },
+            "label": {
+                "title": "Label",
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false
+}

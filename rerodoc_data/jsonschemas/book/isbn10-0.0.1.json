@@ -1,0 +1,5 @@
+{
+    "title": "ISBN identifier with 10 digits",
+    "type": "string",
+    "pattern": "^[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,7}-[0-9,X]{1}$"
+}

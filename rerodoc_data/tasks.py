@@ -33,7 +33,7 @@ from invenio_db import db
 from invenio_indexer.api import RecordIndexer
 from invenio_records.api import Record
 
-from rerodoc_data.minters import bibid_minter
+from rerodoc_data.minters import recid_minter
 
 
 @shared_task(ignore_result=True)
@@ -43,7 +43,8 @@ def create_records(records):
     record_uuids = []
     for record in records:
         uid = uuid.uuid4()
-        id = bibid_minter(uid, record)
+        id = recid_minter(uid, record)
+        print(record)
         record = Record.create(record, id_=uid)
         record_uuids.append(uid)
     record_indexer.bulk_index(record_uuids)

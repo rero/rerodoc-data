@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "title": "Edition",
+    "properties": { 
+        "name": {
+            "title": "Edition name",
+            "type": "string"
+        },
+        "remainder": {
+            "title": "Remainder of the edition",
+            "type": "string"
+        },
+        "full": {
+            "title": "Edition as string",
+            "type": "string"
+        }
+   },
+   "additionalProperties": false
+}

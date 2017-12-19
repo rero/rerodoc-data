@@ -28,7 +28,7 @@ from dojson.contrib.marc21.utils import create_record
 from flask import current_app
 from invenio_jsonschemas import current_jsonschemas as jsonschemas
 
-from rerodoc_data.dojson.marc21tojson import marc21tojson
+from rerodoc_data.dojson import book
 
 from .tasks import create_records
 
@@ -42,7 +42,7 @@ def publish_harvested_records(sender=None, records=[], *args, **kwargs):
         identifier = record.header.identifier
         deleted = record.deleted
         rec = create_record(record.xml)
-        rec = marc21tojson.do(rec)
+        rec = book.do(rec)
         rec['$schema'] = schema_url
         converted_records.append(rec)
-    create_records.delay(converted_records)
+    create_records(converted_records)

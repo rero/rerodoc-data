@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "title": "Access Restrictions",
+    "properties": {
+        "message": {
+            "type": "string",
+            "readOnly": true
+        },
+        "code": {
+            "type": "string",
+            "title": "Restriction Code",
+            "default": "free",
+            "oneOf":[
+                {"enum": ["free", "Restricted access"]},
+                {"pattern": "^No access until [0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+            ],
+            "readOnly": true
+        }
+    },
+    "additionalProperties": false
+}

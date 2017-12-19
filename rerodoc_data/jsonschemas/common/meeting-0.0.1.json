@@ -1,0 +1,29 @@
+{
+    "title": "Meeting",
+    "type": "object",
+    "properties": {
+        "name": {
+            "title": "name",
+            "type": "string"
+        },
+        "location": {
+            "title": "location",
+            "type": "string"
+        },
+        "date": {
+            "title": "Meeting date event",
+            "type": "string"
+        },
+        "number": {
+            "title": "Number",
+            "type": "string",
+            "description": "meeting number"
+        },
+        "full": {
+            "title": "Author name",
+            "type": "string",
+            "description": "Author as string"
+        }
+    },
+    "additionalProperties": false
+}

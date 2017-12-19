@@ -1,0 +1,10 @@
+{
+    "title": "media type",
+    "type": "string",
+    "format": "uri",
+    "enum": [
+    	"http://rdvocab.info/termList/RDAMediaType/1003"
+    ],
+    "default": "http://rdvocab.info/termList/RDAMediaType/1003",
+    "readOnly": true
+}

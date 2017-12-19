@@ -59,3 +59,7 @@ def app(base_app):
     """Flask application fixture."""
     with base_app.app_context():
         yield base_app
+
+def pytest_addoption(parser):
+    parser.addoption("--runslow", action="store_true",
+                     help="Run also slow tests")

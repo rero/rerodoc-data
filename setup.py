@@ -106,10 +106,10 @@ setup(
         # 'invenio_celery.tasks': [],
         # 'invenio_db.models': [],
         'invenio_pidstore.minters': [
-            'bibid = rerodoc_data.minters:bibid_minter'
+            'rero_recid = rerodoc_data.minters:recid_minter'
         ],
         'invenio_pidstore.fetchers': [
-            'bibid = rerodoc_data.fetchers:bibid_fetcher'
+            'rero_recid = rerodoc_data.fetchers:recid_fetcher'
         ],
         'invenio_jsonschemas.schemas': [
             'record = rerodoc_data.jsonschemas'

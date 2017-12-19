@@ -29,14 +29,14 @@ from __future__ import absolute_import, print_function
 from invenio_pidstore.providers.recordid import RecordIdProvider
 
 
-def bibid_minter(record_uuid, data):
-    """RERIOLS bibid minter."""
-    assert 'bibid' not in data
+def recid_minter(record_uuid, data):
+    """RERIOLS recid minter."""
+    assert 'recid' not in data
     provider = RecordIdProvider.create(
         object_type='rec',
         object_uuid=record_uuid
     )
     pid = provider.pid
-    data['bibid'] = pid.pid_value
+    data['recid'] = pid.pid_value
 
     return pid

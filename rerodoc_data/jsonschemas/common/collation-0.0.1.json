@@ -1,0 +1,23 @@
+{
+    "title": "Collation of the document",
+    "type": "object",
+    "properties": {
+        "pages": {
+            "title": "Number of pages",
+            "type": "string"
+        },
+        "other": {
+            "title": "Other infos",
+            "type": "string"
+        },
+        "dimension": {
+            "title": "Dimension of the document",
+            "type": "string"
+        },
+        "full": {
+            "title": "Collation as string",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

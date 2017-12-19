@@ -34,7 +34,7 @@ FetchedPID = namedtuple('FetchedPID', ['provider', 'pid_type', 'pid_value'])
 """A pid fetcher."""
 
 
-def bibid_fetcher(record_uuid, data):
+def recid_fetcher(record_uuid, data):
     """Fetch a record's identifiers.
 
     :param record_uuid: The record UUID.
@@ -44,5 +44,5 @@ def bibid_fetcher(record_uuid, data):
     return FetchedPID(
         provider=RecordIdProvider,
         pid_type=RecordIdProvider.pid_type,
-        pid_value=data['bibid']
+        pid_value=data['recid']
     )

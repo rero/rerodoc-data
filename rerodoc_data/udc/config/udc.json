@@ -1,0 +1,874 @@
+{
+  "574": {
+    "en": "Ecology",
+    "it": "Ecologie",
+    "de": "Ökologie",
+    "uri": [
+      "http://udcdata.info/034899"
+    ],
+    "parent": "root_27",
+    "fr": "Ecologie"
+  },
+  "004": {
+    "en": "Computer science",
+    "it": "Informatique",
+    "de": "Informatik",
+    "uri": [
+      "http://udcdata.info/013566"
+    ],
+    "parent": "root_1",
+    "fr": "Informatique"
+  },
+  "543": {
+    "en": "Analytical chemistry",
+    "it": "Chimie analytique",
+    "de": "Analytische Chemie",
+    "uri": [
+      "http://udcdata.info/029874"
+    ],
+    "parent": "54",
+    "fr": "Chimie analytique"
+  },
+  "2": {
+    "en": "Religion, Theology",
+    "it": "Religion, Théologie",
+    "de": "Religion, Theologie",
+    "uri": [
+      "http://udcdata.info/015988"
+    ],
+    "parent": "root_48",
+    "fr": "Religion, Théologie"
+  },
+  "57": {
+    "en": "Biology",
+    "it": "Biologie",
+    "de": "Biologie",
+    "uri": [
+      "http://udcdata.info/034698"
+    ],
+    "parent": "57/59",
+    "fr": "Biologie"
+  },
+  "71": {
+    "en": "Urbanism",
+    "it": "Urbanisme",
+    "de": "Raumplanung, Städtebau",
+    "uri": [
+      "http://udcdata.info/064926"
+    ],
+    "parent": "72",
+    "fr": "Urbanisme"
+  },
+  "613.2": {
+    "en": "Nutrition and Dietetics",
+    "it": "Nutrizione e Dietetica",
+    "de": "Ernährung und Diätetik",
+    "uri": [
+      "http://udcdata.info/038050"
+    ],
+    "parent": "61",
+    "fr": "Nutrition et diététique"
+  },
+  "72": {
+    "en": "Architecture",
+    "it": "Architecture",
+    "de": "Architektur",
+    "uri": [
+      "http://udcdata.info/065060"
+    ],
+    "parent": "root_48",
+    "fr": "Architecture"
+  },
+  "902": {
+    "en": "Archeology",
+    "it": "Archéologie",
+    "de": "Archäologie",
+    "uri": [
+      "http://udcdata.info/068077"
+    ],
+    "parent": "93/94",
+    "fr": "Archéologie"
+  },
+  "1": {
+    "en": "Philosophy",
+    "it": "Philosophie",
+    "de": "Philosophie",
+    "uri": [
+      "http://udcdata.info/015164"
+    ],
+    "parent": "root_48",
+    "fr": "Philosophie"
+  },
+  "616": {
+    "en": "Clinical medicine",
+    "it": "Médecine clinique",
+    "de": "Klinische Medizin",
+    "uri": [
+      "http://udcdata.info/038801"
+    ],
+    "parent": "61",
+    "fr": "Médecine clinique"
+  },
+  "370": {
+    "en": "Orthophony",
+    "it": "Orthophonie",
+    "de": "Logopädie",
+    "uri": [
+      "http://udcdata.info/024974"
+    ],
+    "parent": "37",
+    "fr": "Orthophonie"
+  },
+  "78": {
+    "en": "Music",
+    "it": "Musique",
+    "de": "Musik",
+    "uri": [
+      "http://udcdata.info/066027"
+    ],
+    "parent": "7",
+    "fr": "Musique"
+  },
+  "681": {
+    "en": "Microengineering",
+    "it": "Microtechnique",
+    "de": "Mikrotechnik",
+    "uri": [
+      "http://udcdata.info/061740"
+    ],
+    "parent": "6",
+    "fr": "Microtechnique"
+  },
+  "159.9": {
+    "en": "Psychology",
+    "it": "Psychologie",
+    "de": "Psychologie",
+    "uri": [
+      "http://udcdata.info/015334"
+    ],
+    "parent": "root_48",
+    "fr": "Psychologie"
+  },
+  "620.9": {
+    "en": "Energy",
+    "it": "Energie",
+    "de": "Energie",
+    "uri": [
+      "http://udcdata.info/041666"
+    ],
+    "parent": "6",
+    "fr": "Energie"
+  },
+  "614.253.5": {
+    "en": "Midwife",
+    "it": "Sage femme",
+    "de": "Sage femme",
+    "uri": [
+      "http://udcdata.info/038191"
+    ],
+    "parent": "61",
+    "fr": "Sage femme"
+  },
+  "621": {
+    "en": "Industrial Engineering",
+    "it": "Génie industriel",
+    "de": "Industrial Engineering",
+    "uri": [
+      "http://udcdata.info/041674"
+    ],
+    "parent": "6",
+    "fr": "Génie industriel"
+  },
+  "663": {
+    "en": "Beverage industry",
+    "it": "Industrie des boissons",
+    "de": "Getränkeindustrie",
+    "uri": [
+      "http://udcdata.info/056698"
+    ],
+    "parent": "66",
+    "fr": "Industrie des boissons"
+  },
+  "93/94": {
+    "en": "History",
+    "it": "Histoire",
+    "de": "Geschichte",
+    "uri": [
+      "http://udcdata.info/068076",
+      "http://udcdata.info/068284"
+    ],
+    "parent": "root_48",
+    "fr": "Histoire"
+  },
+  "6": {
+    "en": "Engineering",
+    "it": "Technologie, Sciences de l'ingénieur",
+    "de": "Technik, Ingenieurwissenschaften",
+    "uri": [
+      "http://udcdata.info/037275"
+    ],
+    "parent": "root_1",
+    "fr": "Technologie, Sciences de l'ingénieur"
+  },
+  "65": {
+    "en": "Information, communication and media sciences",
+    "it": "Sciences de l'information, de la communication et des médias",
+    "de": "Informations-, Kommunikations- und Medienwissenschaften",
+    "uri": [
+      "http://udcdata.info/053508"
+    ],
+    "parent": "root_48",
+    "fr": "Sciences de l'information, de la communication et des médias"
+  },
+  "549": {
+    "en": "Mineralogy",
+    "it": "Minéralogie",
+    "de": "Mineralogie",
+    "uri": [
+      "http://udcdata.info/032645"
+    ],
+    "parent": "54",
+    "fr": "Minéralogie"
+  },
+  "37": {
+    "en": "Education, Teaching",
+    "it": "Educazione, Insegnamento",
+    "de": "Erziehung, Unterricht",
+    "uri": [
+      "http://udcdata.info/024974"
+    ],
+    "parent": "root_48",
+    "fr": "Education, Enseignement"
+  },
+  "36": {
+    "en": "Social work",
+    "it": "Lavoro sociale",
+    "de": "Sozialarbeit",
+    "uri": [
+      "http://udcdata.info/024392"
+    ],
+    "parent": "root_48",
+    "fr": "Travail social"
+  },
+  "796": {
+    "en": "Sports sciences",
+    "it": "Sciences du sport",
+    "de": "Sportwissenschaften",
+    "uri": [
+      "http://udcdata.info/066666"
+    ],
+    "parent": "root_48",
+    "fr": "Sciences du sport"
+  },
+  "73/77": {
+    "en": "Visual arts",
+    "it": "Arts visuels",
+    "de": "Darstellende Kunst",
+    "uri": [
+      "http://udcdata.info/065174",
+      "http://udcdata.info/065213",
+      "http://udcdata.info/065280",
+      "http://udcdata.info/065294",
+      "http://udcdata.info/065307"
+    ],
+    "parent": "7",
+    "fr": "Arts visuels"
+  },
+  "929.5": {
+    "en": "Genealogy",
+    "it": "Genealogia",
+    "de": "Genealogie",
+    "uri": [
+      "http://udcdata.info/068207"
+    ],
+    "parent": "93/94",
+    "fr": "Généalogie"
+  },
+  "615": {
+    "en": "Therapeutic. Pharmacy, Pharmacology",
+    "it": "Terapeutico. Pharmacie, Pharmacologie",
+    "de": "Therapeutisch. Pharmazie, Pharmakologie",
+    "uri": [
+      "http://udcdata.info/038416"
+    ],
+    "parent": "61",
+    "fr": "Thérapeutique. Pharmacie, Pharmacologie"
+  },
+  "7.071": {
+    "en": "Art history",
+    "it": "Histoire de l'art",
+    "de": "Kunstgeschichte",
+    "uri": [
+      "http://udcdata.info/064894"
+    ],
+    "parent": "7",
+    "fr": "Histoire de l'art"
+  },
+  "519.2": {
+    "en": "Probabilites, Statistics",
+    "it": "Probabilità, Statistica",
+    "de": "Wahrscheinlichkeit, Statistik",
+    "uri": [
+      "http://udcdata.info/026936"
+    ],
+    "parent": "51",
+    "fr": "Probabilités, Statistiques"
+  },
+  "81´28": {
+    "en": "Dialectology",
+    "it": "Dialectologie",
+    "de": "Dialektologie",
+    "uri": [
+      "http://udcdata.info/067362"
+    ],
+    "parent": "81",
+    "fr": "Dialectologie"
+  },
+  "77": {
+    "en": "Photography",
+    "it": "Photographie",
+    "de": "Photographie",
+    "uri": [
+      "http://udcdata.info/065307"
+    ],
+    "parent": "73/77",
+    "fr": "Photographie"
+  },
+  "7": {
+    "en": "Arts",
+    "it": "Arts",
+    "de": "Kunst",
+    "uri": [
+      "http://udcdata.info/064676"
+    ],
+    "parent": "root_48",
+    "fr": "Arts"
+  },
+  "31": {
+    "en": "Demography, Sociology, Statistics",
+    "it": "Démographie, Sociologie, Statistique",
+    "de": "Demographie, Soziologie, Statistik",
+    "uri": [
+      "http://udcdata.info/018549"
+    ],
+    "parent": "3",
+    "fr": "Démographie, Sociologie, Statistique"
+  },
+  "39": {
+    "en": "Anthropology, Ethnology",
+    "it": "Anthropologie, Ethnologie",
+    "de": "Anthropologie, Ethnologie",
+    "uri": [
+      "http://udcdata.info/025209"
+    ],
+    "parent": "root_48",
+    "fr": "Anthropologie, Ethnologie"
+  },
+  "616-083": {
+    "en": "Nursing",
+    "it": "Infermieristica",
+    "de": "Krankenpflege",
+    "uri": [
+      "http://udcdata.info/039211"
+    ],
+    "parent": "61",
+    "fr": "Soins infirmiers"
+  },
+  "82": {
+    "en": "Literature",
+    "it": "Littérature",
+    "de": "Literatur",
+    "uri": [
+      "http://udcdata.info/067753"
+    ],
+    "parent": "root_48",
+    "fr": "Littérature"
+  },
+  "81": {
+    "en": "Language, Linguistics",
+    "it": "Langue, Linguistique",
+    "de": "Sprache, Linguistik",
+    "uri": [
+      "http://udcdata.info/067362"
+    ],
+    "parent": "root_48",
+    "fr": "Langue, Linguistique"
+  },
+  "54": {
+    "en": "Chemistry",
+    "it": "Chimie",
+    "de": "Chemie",
+    "uri": [
+      "http://udcdata.info/029653"
+    ],
+    "parent": "root_27",
+    "fr": "Chimie"
+  },
+  "57/59": {
+    "en": "Biology, Life sciences",
+    "it": "Biologie, Sciences de la vie",
+    "de": "Biologie, Biowissenschaften",
+    "uri": [
+      "http://udcdata.info/034698",
+      "http://udcdata.info/035448",
+      "http://udcdata.info/036153"
+    ],
+    "parent": "root_27",
+    "fr": "Biologie, Sciences de la vie"
+  },
+  "621.762": {
+    "en": "Powder metallurgy",
+    "it": "Métallurgie des poudres",
+    "de": "Pulvermetallurgie",
+    "uri": [
+      "http://udcdata.info/044239"
+    ],
+    "parent": "6",
+    "fr": "Métallurgie des poudres"
+  },
+  "620.1": {
+    "en": "Materials",
+    "it": "Matériaux",
+    "de": "Werkstoffe",
+    "uri": [
+      "http://udcdata.info/041396"
+    ],
+    "parent": "6",
+    "fr": "Matériaux"
+  },
+  "16": {
+    "en": "Logic",
+    "it": "Logique",
+    "de": "Logik",
+    "uri": [
+      "http://udcdata.info/015627"
+    ],
+    "parent": "1",
+    "fr": "Logique"
+  },
+  "294/299": {
+    "en": "Orientalism",
+    "it": "Orientalisme",
+    "de": "Orientalistik",
+    "uri": [
+      "http://udcdata.info/018529",
+      "http://udcdata.info/018529",
+      "http://udcdata.info/018529",
+      "http://udcdata.info/018529",
+      "http://udcdata.info/018529",
+      "http://udcdata.info/018529"
+    ],
+    "parent": "2",
+    "fr": "Orientalisme"
+  },
+  "root_1": {
+    "en": "Medicine, Technology, Engineering",
+    "de": "Medizin, Technik, Ingenieurwissenschaften, Informatik",
+    "it": "Médecine, Technologie, Sciences de l'ingénieur, Informatique",
+    "fr": "Médecine, Technologie, Sciences de l'ingénieur, Informatique"
+  },
+  "63/64": {
+    "en": "Health",
+    "it": "Santé",
+    "de": "Gesundheit",
+    "uri": [
+      "http://udcdata.info/050820",
+      "http://udcdata.info/053117"
+    ],
+    "parent": "61",
+    "fr": "Santé"
+  },
+  "3": {
+    "en": "Social sciences",
+    "it": "Sciences sociales",
+    "de": "Sozialwissenschaften",
+    "uri": [
+      "http://udcdata.info/018549"
+    ],
+    "parent": "root_48",
+    "fr": "Sciences sociales"
+  },
+  "94": {
+    "en": "Medieval and modern history",
+    "it": "Histoire médiévale et moderne",
+    "de": "Geschichte des Mittelalters und der Neuzeit",
+    "uri": [
+      "http://udcdata.info/068284"
+    ],
+    "parent": "93/94",
+    "fr": "Histoire médiévale et moderne"
+  },
+  "61": {
+    "en": "Medicine",
+    "it": "Médecine",
+    "de": "Medizin",
+    "uri": [
+      "http://udcdata.info/037318"
+    ],
+    "parent": "root_1",
+    "fr": "Médecine"
+  },
+  "58": {
+    "en": "Botany",
+    "it": "Botanique",
+    "de": "Botanik",
+    "uri": [
+      "http://udcdata.info/035448"
+    ],
+    "parent": "57/59",
+    "fr": "Botanique"
+  },
+  "556": {
+    "en": "Hydrology",
+    "it": "Hydrologie",
+    "de": "Hydrologie",
+    "uri": [
+      "http://udcdata.info/034336"
+    ],
+    "parent": "55",
+    "fr": "Hydrologie"
+  },
+  "53": {
+    "en": "Physics",
+    "it": "Physique",
+    "de": "Physik",
+    "uri": [
+      "http://udcdata.info/027739"
+    ],
+    "parent": "root_27",
+    "fr": "Physique"
+  },
+  "159.953": {
+    "en": "Memory and learning",
+    "it": "Memoria, Apprendimento, Amnesia",
+    "de": "Gedächtnis, Lernen, Gedächtnisschwund",
+    "uri": [
+      "http://udcdata.info/015542"
+    ],
+    "parent": "159.9",
+    "fr": "Mémoire, Apprentissage, Amnésie"
+  },
+  "621.39": {
+    "en": "Telecommunications",
+    "it": "Télécommunications",
+    "de": "Nachrichtentechnik",
+    "uri": [
+      "http://udcdata.info/042064"
+    ],
+    "parent": "6",
+    "fr": "Télécommunications"
+  },
+  "903": {
+    "en": "Pre-history",
+    "it": "Préhistoire",
+    "de": "Vorgeschichte",
+    "uri": [
+      "http://udcdata.info/068093"
+    ],
+    "parent": "93/94",
+    "fr": "Préhistoire"
+  },
+  "615.8": {
+    "en": "Physiotherapy",
+    "it": "Fisioterapia",
+    "de": "Krankengymnastik",
+    "uri": [
+      "http://udcdata.info/038711"
+    ],
+    "parent": "615",
+    "fr": "Physiothérapie"
+  },
+  "32": {
+    "en": "Political sciences",
+    "it": "Sciences politiques",
+    "de": "Politikwissenschaften",
+    "uri": [
+      "http://udcdata.info/019266"
+    ],
+    "parent": "root_48",
+    "fr": "Sciences politiques"
+  },
+  "376": {
+    "en": "Special education",
+    "it": "Educazione speciale",
+    "de": "Heil- und Sonderpädagogik",
+    "uri": [
+      "http://udcdata.info/025161"
+    ],
+    "parent": "37",
+    "fr": "Education spécialisée"
+  },
+  "621.01": {
+    "en": "Mechanics",
+    "it": "Mécanique",
+    "de": "Mechanik",
+    "uri": [
+      "http://udcdata.info/041674"
+    ],
+    "parent": "6",
+    "fr": "Mécanique"
+  },
+  "615.84": {
+    "en": "Medical Radiation Technology",
+    "it": "Radiazioni Medical Technology",
+    "de": "Medizinische Strahlenphysik Technologie",
+    "uri": [
+      "http://udcdata.info/038711"
+    ],
+    "parent": "615",
+    "fr": "Technique en radiologie médicale"
+  },
+  "524.8": {
+    "en": "Cosmology",
+    "it": "Cosmologie",
+    "de": "Kosmologie",
+    "uri": [
+      "http://udcdata.info/027491"
+    ],
+    "parent": "52",
+    "fr": "Cosmologie"
+  },
+  "51": {
+    "en": "Mathematics",
+    "it": "Mathématiques",
+    "de": "Mathematik",
+    "uri": [
+      "http://udcdata.info/025453"
+    ],
+    "parent": "root_27",
+    "fr": "Mathématiques"
+  },
+  "33": {
+    "en": "Economics",
+    "it": "Economie",
+    "de": "Wirtschaft",
+    "uri": [
+      "http://udcdata.info/019520"
+    ],
+    "parent": "root_48",
+    "fr": "Economie"
+  },
+  "931": {
+    "en": "Ancient history",
+    "it": "Histoire ancienne",
+    "de": "Altertum",
+    "uri": [
+      "http://udcdata.info/068076"
+    ],
+    "parent": "93/94",
+    "fr": "Histoire ancienne"
+  },
+  "root_27": {
+    "en": "Exact and natural sciences",
+    "de": "Naturwissenschaften/Mathematik",
+    "it": "Sciences exactes et naturelles",
+    "fr": "Sciences exactes et naturelles"
+  },
+  "551": {
+    "en": "Climate",
+    "it": "Climat",
+    "de": "Klima",
+    "uri": [
+      "http://udcdata.info/033157"
+    ],
+    "parent": "55",
+    "fr": "Climat"
+  },
+  "548": {
+    "en": "Crystallography",
+    "it": "Cristallographie",
+    "de": "Kristallographie",
+    "uri": [
+      "http://udcdata.info/032562"
+    ],
+    "parent": "54",
+    "fr": "Cristallographie"
+  },
+  "616.31": {
+    "en": "Dental medicine",
+    "it": "Médecine dentaire",
+    "de": "Zahnmedizin",
+    "uri": [
+      "http://udcdata.info/039542"
+    ],
+    "parent": "61",
+    "fr": "Médecine dentaire"
+  },
+  "63": {
+    "en": "Agriculture, Agronomy",
+    "it": "Agriculture, Agronomie",
+    "de": "Landwirtschaft, Agronomie",
+    "uri": [
+      "http://udcdata.info/050820"
+    ],
+    "parent": "6",
+    "fr": "Agriculture, Agronomie"
+  },
+  "02": {
+    "en": "Library sciences",
+    "it": "Bibliothéconomie",
+    "de": "Bibliothekswissenschaft",
+    "uri": [
+      "http://udcdata.info/014810"
+    ],
+    "parent": "65",
+    "fr": "Bibliothéconomie"
+  },
+  "91": {
+    "en": "Geography",
+    "it": "Géographie",
+    "de": "Geographie",
+    "uri": [
+      "http://udcdata.info/068128"
+    ],
+    "parent": "root_48",
+    "fr": "Géographie"
+  },
+  "35": {
+    "en": "Public administration",
+    "it": "Administration publique",
+    "de": "Öffentliche Verwaltung",
+    "uri": [
+      "http://udcdata.info/023350"
+    ],
+    "parent": "root_48",
+    "fr": "Administration publique"
+  },
+  "root_48": {
+    "en": "Arts, Human and Social Science",
+    "de": "Geistes- und Sozialwissenschaften",
+    "it": "Lettres, Sciences humaines et sociales",
+    "fr": "Lettres, Sciences humaines et sociales"
+  },
+  "75": {
+    "en": "Painting",
+    "it": "Peinture",
+    "de": "Malerei",
+    "uri": [
+      "http://udcdata.info/065280"
+    ],
+    "parent": "73/77",
+    "fr": "Peinture"
+  },
+  "621.3": {
+    "en": "Electricity",
+    "it": "Electricité",
+    "de": "Electrizität",
+    "uri": [
+      "http://udcdata.info/042064"
+    ],
+    "parent": "6",
+    "fr": "Electricité"
+  },
+  "34": {
+    "en": "Law",
+    "it": "Droit",
+    "de": "Recht",
+    "uri": [
+      "http://udcdata.info/021523"
+    ],
+    "parent": "root_48",
+    "fr": "Droit"
+  },
+  "66": {
+    "en": "Chemical technology",
+    "it": "Chimie industrielle",
+    "de": "Chemische Verfahrenstechnik",
+    "uri": [
+      "http://udcdata.info/054896"
+    ],
+    "parent": "6",
+    "fr": "Chimie industrielle"
+  },
+  "56": {
+    "en": "Paleontology",
+    "it": "Paléontologie",
+    "de": "Paläontologie",
+    "uri": [
+      "http://udcdata.info/034455"
+    ],
+    "parent": "55/56",
+    "fr": "Paléontologie"
+  },
+  "60": {
+    "en": "Biotechnology",
+    "it": "Biotechnologies",
+    "de": "Biotechnologie",
+    "uri": [
+      "http://udcdata.info/037276"
+    ],
+    "parent": "57/59",
+    "fr": "Biotechnologies"
+  },
+  "621.38": {
+    "en": "Electronics",
+    "it": "Electronique",
+    "de": "Elektronik",
+    "uri": [
+      "http://udcdata.info/042064"
+    ],
+    "parent": "6",
+    "fr": "Electronique"
+  },
+  "664": {
+    "en": "Food production and preservation",
+    "it": "Fabrication et conservation des aliments",
+    "de": "Lebensmittelherstellung und -konservierung",
+    "uri": [
+      "http://udcdata.info/057026"
+    ],
+    "parent": "66",
+    "fr": "Fabrication et conservation des aliments"
+  },
+  "52": {
+    "en": "Astronomy, Astrophysics",
+    "it": "Astronomie, Astrophysique",
+    "de": "Astronomie, Astrophysik",
+    "uri": [
+      "http://udcdata.info/027114"
+    ],
+    "parent": "root_27",
+    "fr": "Astronomie, Astrophysique"
+  },
+  "55/56": {
+    "en": "Earth sciences",
+    "it": "Sciences de la terre",
+    "de": "Erdwissenschaften",
+    "uri": [
+      "http://udcdata.info/032958",
+      "http://udcdata.info/034455"
+    ],
+    "parent": "root_27",
+    "fr": "Sciences de la terre"
+  },
+  "59": {
+    "en": "Zoology",
+    "it": "Zoologie",
+    "de": "Zoologie",
+    "uri": [
+      "http://udcdata.info/036153"
+    ],
+    "parent": "57/59",
+    "fr": "Zoologie"
+  },
+  "378.6": {
+    "en": "Higher Education Institutions",
+    "it": "Scuole universitarie",
+    "de": "Hochschulen",
+    "uri": [
+      "http://udcdata.info/025169"
+    ],
+    "parent": "37",
+    "fr": "Hautes écoles"
+  },
+  "55": {
+    "en": "Geology",
+    "it": "Géologie",
+    "de": "Geologie",
+    "uri": [
+      "http://udcdata.info/032958"
+    ],
+    "parent": "55/56",
+    "fr": "Géologie"
+  }
+}

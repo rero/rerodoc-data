@@ -1,0 +1,5 @@
+{
+    "title": "RERO DOC identifier",
+    "default": "1234",
+    "type": "string"
+}
