@@ -1,4 +1,4 @@
-from conftest import marc2record, marc2marc, record2jsonld, validator
+from conftest import marc2marc, marc2record, record2jsonld, validator
 
 validator = validator('common/submission_number-0.0.1.json')
 assert validator

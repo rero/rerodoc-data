@@ -22,7 +22,7 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-"""Pytest configuration."""
+"""Fixtures for tests."""
 
 from __future__ import absolute_import, print_function
 
@@ -60,6 +60,8 @@ def app(base_app):
     with base_app.app_context():
         yield base_app
 
+
 def pytest_addoption(parser):
+    """To Do."""
     parser.addoption("--runslow", action="store_true",
                      help="Run also slow tests")

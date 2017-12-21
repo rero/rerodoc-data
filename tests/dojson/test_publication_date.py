@@ -1,6 +1,6 @@
 import pytest
-from conftest import marc2record, marc2marc, record2jsonld, validator
-from jsonschema import validate, ValidationError
+from conftest import marc2marc, marc2record, record2jsonld, validator
+from jsonschema import ValidationError, validate
 
 validator = validator('common/publication_date-0.0.1.json')
 assert validator

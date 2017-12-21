@@ -2,12 +2,13 @@
 
 """MARC 21 model definition."""
 
-from dojson import utils
-from dojson import Overdo
-from . import utils as myutils
-from .utils import ln2lang, lang2ln
-import re
 import copy
+import re
+
+from dojson import Overdo, utils
+
+from . import utils as myutils
+from .utils import lang2ln, ln2lang
 
 book = Overdo()
 book2marc = Overdo()
@@ -88,7 +89,7 @@ def authors(self, key, value):
 
     def get_value(value):
         full = myutils.concatenate(value, ['a', 'd'])
-        #if value.get("e"):
+        # if value.get("e"):
         #    full = full + " (" + value.get("e") + ")"
 
         to_return = {
@@ -234,7 +235,6 @@ def edition2marc(self, key, value):
 @utils.filter_values
 def publication(self, key, value):
     """Publication Statement."""
-
     def get_publication_date(value):
         raw_date = value.get('c')
         if not raw_date:
@@ -294,7 +294,6 @@ def publication2marc(self, key, value):
 @utils.filter_values
 def publication(self, key, value):
     """Collation Statement."""
-
     def get_n_pages(value):
         raw_pages = value.get('a')
         if not raw_pages:
@@ -319,7 +318,8 @@ def publication(self, key, value):
         if not raw_dimension:
             return None
 
-        dimension = re.findall(r'(\d+)\s*x\s*(\d+)\s*cm', raw_dimension, re.IGNORECASE)
+        dimension = re.findall(r'(\d+)\s*x\s*(\d+)\s*cm',
+                               raw_dimension, re.IGNORECASE)
 
         if dimension:
             return {
@@ -536,13 +536,14 @@ def subject2marc(self, key, value):
 @book.over('corporate', '^710__')
 @utils.for_each_value
 def corporate(self, key, value):
+    """Subject Statement."""
     return value.get('a')
 
 
 @book2marc.over('710__', 'corporate')
 @utils.for_each_value
 def corporate2marc(self, key, value):
-    """Meeting Statement."""
+    """Corporate Statement."""
     return {
         "a": value
     }
@@ -551,6 +552,7 @@ def corporate2marc(self, key, value):
 @book.over('meeting', '^711__')
 @utils.filter_values
 def meeting(self, key, value):
+    """Meeting Statement."""
     return {
         'name': value.get('a'),
         'location': value.get('c'),
@@ -575,6 +577,7 @@ def meeting2marc(self, key, value):
 @book.over('other_edition', '^775__')
 @utils.filter_values
 def other_edition(self, key, value):
+    """Other Edition Statement."""
     return {
         'type': value.get('g'),
         'url': value.get('o')
@@ -595,6 +598,7 @@ def other_edition2marc(self, key, value):
 @book.over('document', '^8564_')
 @utils.ignore_value
 def document(self, key, value):
+    """Document Statement."""
     value = utils.force_list(value)
     document = self.get('document', [])
     links = self.get('external_link', [])
@@ -669,6 +673,7 @@ def document2marc(self, key, value):
 @book.over('institution', '^919__')
 @utils.filter_values
 def institution(self, key, value):
+    """Institution Statement."""
     institution = self.get('institution', {})
     institution.update({
         'name': value.get('a'),
@@ -697,7 +702,6 @@ def institution2marc(self, key, value):
 @utils.filter_values
 def document_type(self, key, value):
     """Record Document Type."""
-
     self['media_type'] = 'http://rdvocab.info/termList/RDAMediaType/1003'
     self['type'] = ['bibrec', value.get('a').lower(), 'text']
 

@@ -33,6 +33,7 @@
 include .dockerignore
 include .editorconfig
 include .tx/config
+include development/continuous_integration/Jenkinsfile
 prune docs/_build
 recursive-include rerodoc_data *.po *.pot *.mo
 include development/continuous_integration/Dockerfile
@@ -62,3 +63,6 @@ recursive-include development *.sh
 
 # added by check_manifest.py
 recursive-include rerodoc_data *.json
+
+# added by check_manifest.py
+recursive-include rerodoc_data *.rdf

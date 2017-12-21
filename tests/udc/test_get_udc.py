@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-from rerodoc_data.udc.udc import extract_rdf, update_udc, \
-                                 get_udc, get_long_names, \
-                                 UnsupportedError
+from rerodoc_data.udc.udc import UnsupportedError, extract_rdf, \
+    get_long_names, get_udc, update_udc
 
 slow = pytest.mark.skipif(
     not pytest.config.getoption('--runslow'),

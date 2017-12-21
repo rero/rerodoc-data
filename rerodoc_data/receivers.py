@@ -26,8 +26,8 @@
 from celery import shared_task
 from dojson.contrib.marc21.utils import create_record
 from flask import current_app
-from invenio_jsonschemas import current_jsonschemas as jsonschemas
 
+from invenio_jsonschemas import current_jsonschemas as jsonschemas
 from rerodoc_data.dojson import book
 
 from .tasks import create_records

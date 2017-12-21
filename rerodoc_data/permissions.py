@@ -29,6 +29,7 @@ from __future__ import absolute_import, print_function
 from flask import current_app, request, session
 from flask_principal import ActionNeed
 from flask_security import current_user
+
 from invenio_access import Permission
 from invenio_files_rest.models import Bucket, MultipartObject, ObjectVersion
 from invenio_records.api import Record
@@ -64,7 +65,6 @@ def files_permission_factory(obj, action=None):
             record = Record.get_record(rb.record_id)
             return RecordFilesPermission.create(record, action)
 
-
     return Permission(ActionNeed('admin-access'))
 
 
@@ -85,6 +85,7 @@ class RecordFilesPermission(object):
 
       1. Administrators only.
     """
+
     def __init__(self, record, func):
         """Initialize a file permission object."""
         self.record = record
@@ -116,6 +117,7 @@ class RecordFilesPermission(object):
         else:
             return cls(record, deny)
 
+
 #
 # Utility functions
 #
@@ -127,6 +129,7 @@ def deny(user, record):
 def allow(user, record):
     """Allow access."""
     return True
+
 
 def has_admin_permission(user, record):
     """Check if user has admin access to record."""

@@ -29,10 +29,10 @@ from __future__ import absolute_import, print_function
 import uuid
 
 from celery import shared_task
+
 from invenio_db import db
 from invenio_indexer.api import RecordIndexer
 from invenio_records.api import Record
-
 from rerodoc_data.minters import recid_minter
 
 

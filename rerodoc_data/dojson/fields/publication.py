@@ -1,8 +1,9 @@
 """MARC 21 model definition."""
 
-from ..models import audio, audio2marc
 from dojson import utils
+
 from .. import utils as myutils
+from ..models import audio, audio2marc
 
 
 @audio.over('publication', '^260__')

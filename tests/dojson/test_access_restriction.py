@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from conftest import marc2record, marc2marc, record2jsonld, validator
+from conftest import marc2marc, marc2record, record2jsonld, validator
 from jsonschema import ValidationError
 
 validator = validator('common/access_restriction-0.0.1.json')

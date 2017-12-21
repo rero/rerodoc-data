@@ -1,8 +1,10 @@
 """MARC 21 model definition."""
 
-from ..models import book, book2marc
-from dojson import utils
 import re
+
+from dojson import utils
+
+from ..models import book, book2marc
 
 ISBN10_REGEX = re.compile(r'^[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,7}-[0-9,X]{1}$')
 ISBN13_REGEX = re.compile(r'^[0-9]{13}$')

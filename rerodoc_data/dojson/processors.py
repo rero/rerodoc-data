@@ -26,7 +26,7 @@ def convert_marcxml(source):
     """Convert MARC XML to JSON."""
     from dojson.contrib.marc21.utils import create_record, split_blob
 
-    #from .book import book
+    # from .book import book
     from .book import book
     from .audio import audio
 
@@ -37,7 +37,7 @@ def convert_marcxml(source):
         if _collection_in_record(record, 'audio'):
             yield audio.do(record)
 
-        #else:
+        # else:
         #    yield default.do(record)
         yield book.do(record)
 

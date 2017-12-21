@@ -1,3 +1,29 @@
+# -*- coding: utf-8 -*-
+#
+# This file is part of Invenio.
+# Copyright (C) 2017 RERO.
+#
+# Invenio is free software; you can redistribute it
+# and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# Invenio is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Invenio; if not, write to the
+# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+# MA 02111-1307, USA.
+#
+# In applying this license, RERO does not
+# waive the privileges and immunities granted to it by virtue of its status
+# as an Intergovernmental Organization or submit itself to any jurisdiction.
+
+"""Serializers for RERO DOC."""
+
 from invenio_records_rest.serializers.json import JSONSerializer
 from invenio_records_rest.serializers.schemas.json import RecordSchemaJSONV1
 from invenio_records_rest.serializers.response import record_responsify
@@ -12,6 +38,7 @@ from rerodoc_data.dojson.models import book2marc
 
 
 class MARCXMLSerializer(DOJSONMARCXMLSerializer):
+    """To do."""
 
     def __init__(self, dojson_model, xslt_filename=None, schema_class=None,
                  replace_refs=False):
@@ -22,10 +49,9 @@ class MARCXMLSerializer(DOJSONMARCXMLSerializer):
         super(MARCXMLSerializer, self).__init__(
             dojson_model, replace_refs=replace_refs)
 
-
     def serialize_search(self, pid_fetcher, search_result,
                          item_links_factory=None, **kwargs):
-
+        """To do."""
         total = search_result['hits']['total']
         out = '<!--  Search-Engine-Total-Number-Of-Results: %s  -->\n' % total
         parent = super(MARCXMLSerializer, self)
@@ -35,6 +61,7 @@ class MARCXMLSerializer(DOJSONMARCXMLSerializer):
 
 
 class LDSerializer(JSONSerializer):
+    """To do."""
 
     def __init__(self, schema_class, output_format='json-ld',
                  replace_refs=False):
@@ -67,6 +94,7 @@ class LDSerializer(JSONSerializer):
 
     def serialize(self, pid, record, links_factory=None):
         """Serialize a single record and persistent identifier.
+
         :param pid: Persistent identifier instance.
         :param record: Record instance.
         :param links_factory: Factory function for the link generation,

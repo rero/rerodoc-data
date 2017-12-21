@@ -1,12 +1,16 @@
-import os
-import json
+# -*- coding: utf-8 -*-
+
+"""Utils for MARC 21 model definition."""
+
 import functools
+import json
+import os
+
 import six
 
 
 def legacy_export_as_marc(json, tabsize=4):
     """Create the MARCXML representation using the producer rules."""
-
     def encode_for_marcxml(value):
         from xml.sax.saxutils import escape
         if isinstance(value, unicode):
@@ -59,6 +63,7 @@ def legacy_export_as_marc(json, tabsize=4):
 
 
 def concatenate(data, subfields, sep=" "):
+    """To do."""
     to_concatenate = []
     for sf in subfields:
         if data.get(sf):
@@ -69,6 +74,7 @@ def concatenate(data, subfields, sep=" "):
 
 
 def expand(schema):
+    """To do."""
     if isinstance(schema, list):
         for s in schema:
             expand(s)
@@ -87,8 +93,10 @@ def expand(schema):
 
 
 def get_schema(name, base='common', version="0.0.1"):
+    """To do."""
     schema_file_name = os.path.join(os.path.dirname(__file__), base,
-                                    "schemas", base, name + "-" + version + ".json")
+                                    "schemas", base,
+                                    name + "-" + version + ".json")
     if not os.path.isfile(schema_file_name):
         return None
 
@@ -98,6 +106,7 @@ def get_schema(name, base='common', version="0.0.1"):
 
 
 def get_form(name, base='common', version="0.0.1"):
+    """To do."""
     form_file_name = os.path.join(os.path.dirname(__file__), base,
                                   "forms", name + "-" + version + ".json")
     if not os.path.isfile(form_file_name):
@@ -109,6 +118,7 @@ def get_form(name, base='common', version="0.0.1"):
 
 
 def get_context(name, version="0.0.1"):
+    """To do."""
     context_file_name = os.path.join(os.path.dirname(__file__), name,
                                      "context", name + "-" + version + ".json")
     if not os.path.isfile(context_file_name):
@@ -117,6 +127,7 @@ def get_context(name, version="0.0.1"):
 
 
 def ln2lang(ln):
+    """To do."""
     mapping = {
         'en': 'eng',
         'fr': 'fre',
@@ -140,6 +151,7 @@ def ln2lang(ln):
 
 
 def lang2ln(lang):
+    """To do."""
     mapping = {
         'eng': 'en',
         'fre': 'fr',

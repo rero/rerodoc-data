@@ -1,15 +1,39 @@
 # -*- coding: utf-8 -*-
-# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
+#
+# This file is part of Invenio.
+# Copyright (C) 2017 RERO.
+#
+# Invenio is free software; you can redistribute it
+# and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# Invenio is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Invenio; if not, write to the
+# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+# MA 02111-1307, USA.
+#
+# In applying this license, RERO does not
+# waive the privileges and immunities granted to it by virtue of its status
+# as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-import pytest
-import os
+"""Fixtures for tests."""
 
 import json
+import os
+
 import jsonschema
+import pytest
 from pkg_resources import resource_filename
 
 
 def validator(schema):
+    """To Do."""
     schema = resource_filename('rerodoc_data.jsonschemas', schema)
 
     schema_dir = os.path.dirname(os.path.abspath(schema))
@@ -33,6 +57,7 @@ def validator(schema):
 
 
 def marc2record(marc, record_type='book'):
+    """To Do."""
     from rerodoc_data.dojson import book, audio
     if record_type == 'book':
         return book.do(marc)
@@ -41,6 +66,7 @@ def marc2record(marc, record_type='book'):
 
 
 def marc2marc(marc, record_type='book'):
+    """To Do."""
     from rerodoc_data.dojson import book, book2marc
     from rerodoc_data.dojson import audio, audio2marc
     if record_type == 'book':
@@ -52,6 +78,7 @@ def marc2marc(marc, record_type='book'):
 
 
 def record2jsonld(record, context):
+    """To Do."""
     from pyld import jsonld
     import json
     import rdflib_jsonld
@@ -65,7 +92,6 @@ def record2jsonld(record, context):
 
 def get_demo_record(rec):
     """Get a record in Json format from a MarcXML."""
-
     from dojson.contrib.marc21.utils import create_record
     from rerodoc_data.dojson import book
     blob = create_record(rec)
