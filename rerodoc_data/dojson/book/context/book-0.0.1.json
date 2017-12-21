@@ -9,19 +9,15 @@
         "rdau": "http://rdaregistry.info/Elements/u/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns# ",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-
         "type": "@type",
         "recid": "@id",
         "full": "@value",
         "lang": "@language",
-        
         "media_type": {
             "@id": "rdau:mediaType",
             "@type": "@id"
             },
-
         "@base": "http://doc.rero.ch/record/",
-
         "text": "dcmitype:Text",
         "book": "bibo:Book",
         "bibrec": "dct:BibliographicResource",
@@ -34,15 +30,12 @@
         "authors": {
             "@id": "dc:creator"
         },
-
         "isbn10": "bibo:isbn10",
         "isbn13": "bibo:isbn13",
-        
         "rero_id": {
             "@id": "dct:hasFormat",
             "@type": "@id"
         },
-        
         "edition": "bibo:edition",
         "publication": "rdau:publicationStatement",
         "publication_date": "dct:issued",
@@ -55,6 +48,5 @@
             "@type": "@id"
         },
         "uri": "@set"
-
     }
 }

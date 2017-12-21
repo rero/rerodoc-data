@@ -92,9 +92,15 @@ setup(
         'invenio_i18n.translations': [
             'messages = rerodoc_data',
         ],
+        # 'dojson.cli.rule': [
+        #     'marc21tojson ='
+        #     'rerodoc_data.dojson.marc21tojson:marc21tojson'
+        # ],
         'dojson.cli.rule': [
-            'marc21tojson ='
-            'rerodoc_data.dojson.marc21tojson:marc21tojson'
+            'book = rerodoc_data.dojson:book',
+            'book2marc = rerodoc_data.dojson:book2marc',
+            'audio = rerodoc_data.dojson:audio',
+            'book2audio = rerodoc_data.dojson:audio2marc'
         ],
         # TODO: Edit these entry points to fit your needs.
         # 'invenio_access.actions': [],

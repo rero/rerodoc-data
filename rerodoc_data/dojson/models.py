@@ -13,10 +13,10 @@ book = Overdo()
 book2marc = Overdo()
 
 
-# @book.over('recid', '^001')
-# def control_number(self, key, value):
-#     """Record Identifier."""
-#     return value
+@book.over('recid', '^001')
+def control_number(self, key, value):
+    """Record Identifier."""
+    return value
 
 
 @book2marc.over('001', 'recid')

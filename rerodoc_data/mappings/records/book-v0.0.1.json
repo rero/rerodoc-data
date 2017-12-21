@@ -1,23 +1,156 @@
 {
-  "settings": {
-    "number_of_shards": 1,
-    "number_of_replicas": 0,
-    "max_result_window": 20000
-  },
-  "mappings": {
-    "book-v0.0.1": {
-      "date_detection": false,
-      "numeric_detection": false,
-      "properties": {
-        "$schema": {
-          "type": "string",
-          "index": "not_analyzed"
-        },
-        "recid": {
-          "type": "string",
-          "index": "not_analyzed"
+    "settings": {
+        "analysis" : {
+            "analyzer" : {
+                "default" : {
+                    "type" : "english"
+                }
+            }
+       }
+    },
+    "mappings": {
+        "book-v0.0.1": {
+            "date_detection": false,
+            "numeric_detection" : false,
+            "properties": {
+                "_collections": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                    },
+                "language": {
+                    "type": "string",
+                    "copy_to": "facet_language"
+                },
+                "institution":{
+                    "properties": {
+                        "code": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "name":{
+                            "type": "string",
+                            "analyzer" : "default"
+                        },
+                        "locality": {
+                            "type": "string",
+                            "analyzer" : "default"
+                        }
+                    }
+                },
+                "title": {
+                    "properties": {
+                        "maintitle": {
+                            "type": "string",
+                            "analyzer": "standard",
+                            "fields": {
+                                "de": {
+                                    "type": "string",
+                                    "analyzer": "german"
+                                },
+                                "en": {
+                                    "type": "string",
+                                    "analyzer": "english"
+                                },
+                                "fr": {
+                                    "type": "string",
+                                    "analyzer": "french"
+                                },
+                                "it": {
+                                    "type": "string",
+                                    "analyzer": "italian"
+                                }
+                            }
+                        },
+                        "lang": {
+                            "type": "string"
+                        },
+                        "subtitle": {
+                            "type": "string"
+                        },
+                        "full": {
+                            "type": "string",
+                            "analyzer": "standard"
+                        }
+                    }
+                },
+                "document_type": {
+                    "properties": {
+                        "main": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        }
+                    }
+                },
+                "keyword": {
+                    "properties": {
+                        "content": {
+                            "type": "string",
+                            "copy_to": "facet_keyword"
+                        }
+                    }
+                },
+                "authors": {
+                    "properties": {
+                        "full": {
+                            "type": "string",
+                            "copy_to": "facet_author"
+                        }
+                    }
+                },
+                "specific_collection": {
+                    "properties": {
+                        "code": {
+                            "type": "string",
+                            "analyzer": "standard"
+                        },
+                        "name": {
+                            "type": "string",
+                            "index": "not_analyzed"
+
+                        }
+                    }
+                },
+                "udc": {
+                    "properties": {
+                        "code": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "uri": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "en": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "fr": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "de": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "it": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        }
+                    }
+                },
+                "facet_author": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "facet_keyword": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "facet_language": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                }
+            }
         }
-      }
     }
-  }
 }

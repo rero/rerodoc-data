@@ -44,9 +44,9 @@ def create_records(records):
     for record in records:
         uid = uuid.uuid4()
         id = recid_minter(uid, record)
-        print(record)
         record = Record.create(record, id_=uid)
         record_uuids.append(uid)
+        db.session.flush()
     record_indexer.bulk_index(record_uuids)
     record_indexer.process_bulk_queue()
     db.session.commit()

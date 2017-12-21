@@ -50,7 +50,22 @@
         "specific_collection": {"$ref": "http://rerodoc.test.rero.ch/schema/common/specific_collection-0.0.1.json"},
         "submission_number": {"$ref": "http://rerodoc.test.rero.ch/schema/common/submission_number-0.0.1.json"},
         "udc": {"$ref": "http://rerodoc.test.rero.ch/schema/common/udc-0.0.1.json"},
-        "access_restriction": {"$ref": "http://rerodoc.test.rero.ch/schema/common/access_restriction-0.0.1.json"}
+        "access_restriction": {"$ref": "http://rerodoc.test.rero.ch/schema/common/access_restriction-0.0.1.json"},
+        "_oai": {"$ref": "http://rerodoc.test.rero.ch/schema/oaiserver/internal-v1.0.0.json"},
+        "_files": {
+            "description": "List of files attached to the record.",
+            "items": {
+              "$ref": "http://rerodoc.test.rero.ch/schema/records-files/records-files-v1.0.0.json"
+            },
+            "type": "array"
+          },
+        "_collections": {
+            "description": "Specific collections.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+        }
     },
     "additionalProperties": false
 }
